@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>x-im-client-demo</artifactId>
+    <packaging>jar</packaging>
+    <name>x-im-client-demo</name>
+    <parent>
+        <groupId>net.commchina</groupId>
+        <artifactId>x-im</artifactId>
+        <version>1.0.0.0</version>
+    </parent>
+    <dependencies>
+		<dependency>
+			<groupId>net.commchina</groupId>
+			<artifactId>x-im-client</artifactId>
+			<version>1.0.0.0</version>
+		</dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin-version}</version>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
