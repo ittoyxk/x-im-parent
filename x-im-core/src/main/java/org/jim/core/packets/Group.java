@@ -39,7 +39,7 @@ public class Group extends Message{
 	 */
 	private List<User> users;
 
-	private Group(){}
+	public Group(){}
 
 	private Group(String groupId , String name, String avatar, Integer online, List<User> users, JSONObject extras){
 		this.groupId = groupId;

@@ -53,7 +53,7 @@ public class User extends Message implements Serializable{
 	 */
 	private List<Group> groups;
 	
-	private User(){}
+	public User(){}
 
 	private User(String userId, String nick, String avatar, String status, String sign, String terminal, List<Group> friends, List<Group> groups, JSONObject extras){
 		this.userId = userId;

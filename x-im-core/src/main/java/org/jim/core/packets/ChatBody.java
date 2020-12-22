@@ -38,7 +38,7 @@ public class ChatBody extends Message {
 	 */
 	private String groupId;
 	
-	private ChatBody(){}
+	public ChatBody(){}
 	
 	private ChatBody(String id , String from , String to , Integer msgType , Integer chatType , String content , String groupId , Integer cmd , Long createTime , JSONObject extras){
 		this.id = id;
