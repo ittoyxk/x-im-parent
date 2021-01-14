@@ -16,6 +16,7 @@ public class  LoginRespBody extends RespBody {
 	private static final long serialVersionUID = 1L;
 	private String token;
 	private User user;
+	private String sessionId;
 
 	public LoginRespBody(){
 		this.setCommand(Command.COMMAND_LOGIN_RESP);
@@ -49,6 +50,16 @@ public class  LoginRespBody extends RespBody {
 
 	public void setToken(String token) {
 		this.token = token;
+	}
+
+	public String getSessionId()
+	{
+		return sessionId;
+	}
+
+	public void setSessionId(String sessionId)
+	{
+		this.sessionId = sessionId;
 	}
 
 	public static LoginRespBody success(){

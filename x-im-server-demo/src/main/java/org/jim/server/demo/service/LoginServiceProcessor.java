@@ -101,7 +101,9 @@ public class LoginServiceProcessor extends AbstractProtocolCmdProcessor implemen
 	@Override
 	public LoginRespBody doLogin(LoginReqBody loginReqBody, ImChannelContext imChannelContext) {
 		if(Objects.nonNull(loginReqBody.getUserId()) && Objects.nonNull(loginReqBody.getPassword())){
-			return LoginRespBody.success();
+			LoginRespBody success = LoginRespBody.success();
+			success.setSessionId(imChannelContext.getId());
+			return success;
 		}else {
 			return LoginRespBody.failed();
 		}
