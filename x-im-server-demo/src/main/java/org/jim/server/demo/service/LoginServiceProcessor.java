@@ -102,7 +102,6 @@ public class LoginServiceProcessor extends AbstractProtocolCmdProcessor implemen
 	public LoginRespBody doLogin(LoginReqBody loginReqBody, ImChannelContext imChannelContext) {
 		if(Objects.nonNull(loginReqBody.getUserId()) && Objects.nonNull(loginReqBody.getPassword())){
 			LoginRespBody success = LoginRespBody.success();
-			success.setSessionId(imChannelContext.getId());
 			return success;
 		}else {
 			return LoginRespBody.failed();

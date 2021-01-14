@@ -5,7 +5,7 @@
     <groupId>net.commchina</groupId>
     <artifactId>x-im</artifactId>
     <name>x-im</name>
-    <version>1.0.0.0</version>
+    <version>1.0.0.2</version>
 
     <packaging>pom</packaging>
     <description>jim is the dependent parent project of J-IM communication establishment.</description>

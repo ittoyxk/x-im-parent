@@ -35,6 +35,7 @@ public class LoginReqHandler extends AbstractCmdHandler {
 		LoginReqBody loginReqBody = JsonKit.toBean(packet.getBody(), LoginReqBody.class);
 		LoginCmdProcessor loginProcessor = this.getSingleProcessor(LoginCmdProcessor.class);
 		LoginRespBody loginRespBody = LoginRespBody.success();
+		loginRespBody.setSessionId(imChannelContext.getId());
 		User user = getUserByProcessor(imChannelContext, loginProcessor, loginReqBody, loginRespBody);
 		IProtocol protocol = imServerChannelContext.getProtocolHandler().getProtocol();
 		user.setTerminal(Objects.isNull(protocol) ? Protocol.UNKNOWN : protocol.name());
